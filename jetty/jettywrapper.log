@@ -1,0 +1,115 @@
+0    [main] INFO  org.eclipse.jetty.server.Server  – jetty-8.1.10.v20130312
+24   [main] INFO  org.eclipse.jetty.deploy.providers.ScanningAppProvider  – Deployment monitor /home/rails/RubymineProjects/spotlight/jetty/contexts at interval 0
+34   [main] INFO  org.eclipse.jetty.deploy.DeploymentManager  – Deployable added: /home/rails/RubymineProjects/spotlight/jetty/contexts/solr.xml
+1323 [main] INFO  org.eclipse.jetty.webapp.StandardDescriptorProcessor  – NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+1413 [main] INFO  org.apache.solr.servlet.SolrDispatchFilter  – SolrDispatchFilter.init()
+1432 [main] INFO  org.apache.solr.core.SolrResourceLoader  – JNDI not configured for solr (NoInitialContextEx)
+1432 [main] INFO  org.apache.solr.core.SolrResourceLoader  – using system property solr.solr.home: /home/rails/RubymineProjects/spotlight/jetty/solr
+1433 [main] INFO  org.apache.solr.core.SolrResourceLoader  – new SolrResourceLoader for directory: '/home/rails/RubymineProjects/spotlight/jetty/solr/'
+1435 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/' to classloader
+1435 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/solr-clustering-4.10.3.jar' to classloader
+1435 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/solr-analysis-extras-4.10.3.jar' to classloader
+1436 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/solr-langid-4.10.3.jar' to classloader
+1591 [main] INFO  org.apache.solr.core.ConfigSolr  – Loading container configuration from /home/rails/RubymineProjects/spotlight/jetty/solr/solr.xml
+1733 [main] INFO  org.apache.solr.core.CoresLocator  – Config-defined core root directory: /home/rails/RubymineProjects/spotlight/jetty/solr
+1740 [main] INFO  org.apache.solr.core.CoreContainer  – New CoreContainer 766809031
+1740 [main] INFO  org.apache.solr.core.CoreContainer  – Loading cores into CoreContainer [instanceDir=/home/rails/RubymineProjects/spotlight/jetty/solr/]
+1742 [main] INFO  org.apache.solr.core.CoreContainer  – loading shared library: /home/rails/RubymineProjects/spotlight/jetty/solr/lib
+1743 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/' to classloader
+1743 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/solr-clustering-4.10.3.jar' to classloader
+1744 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/solr-analysis-extras-4.10.3.jar' to classloader
+1744 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/solr-langid-4.10.3.jar' to classloader
+1766 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting socketTimeout to: 0
+1766 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting urlScheme to: null
+1770 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting connTimeout to: 0
+1770 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting maxConnectionsPerHost to: 20
+1770 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting corePoolSize to: 0
+1771 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting maximumPoolSize to: 2147483647
+1771 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting maxThreadIdleTime to: 5
+1771 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting sizeOfQueue to: -1
+1771 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting fairnessPolicy to: false
+1902 [main] INFO  org.apache.solr.update.UpdateShardHandler  – Creating UpdateShardHandler HTTP client with params: socketTimeout=0&connTimeout=0&retry=false
+1904 [main] INFO  org.apache.solr.logging.LogWatcher  – SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+1905 [main] INFO  org.apache.solr.logging.LogWatcher  – Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+1906 [main] INFO  org.apache.solr.core.CoreContainer  – Host Name: 
+1953 [main] INFO  org.apache.solr.core.CoresLocator  – Looking for core definitions underneath /home/rails/RubymineProjects/spotlight/jetty/solr
+1969 [main] INFO  org.apache.solr.core.CoresLocator  – Found core blacklight-core in /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/
+1969 [main] INFO  org.apache.solr.core.CoresLocator  – Found 1 core definitions
+1971 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – new SolrResourceLoader for directory: '/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/'
+2002 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrConfig  – Adding specified lib dirs to ClassLoader
+2003 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-polish-1.7.1.jar' to classloader
+2003 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-fsa-1.7.1.jar' to classloader
+2003 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-stemming-1.7.1.jar' to classloader
+2003 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lib/icu4j-53.1.jar' to classloader
+2004 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-smartcn-4.10.3.jar' to classloader
+2004 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-icu-4.10.3.jar' to classloader
+2004 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-morfologik-4.10.3.jar' to classloader
+2004 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/rails/RubymineProjects/spotlight/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-stempel-4.10.3.jar' to classloader
+2091 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrConfig  – Using Lucene MatchVersion: 4.10.3
+2245 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.Config  – Loaded SolrConfig: solrconfig.xml
+2251 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.schema.IndexSchema  – Reading Solr Schema from /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/conf/schema.xml
+2290 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.schema.IndexSchema  – [blacklight-core] Schema name=Hydra
+2507 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.schema.IndexSchema  – unique key field: id
+2628 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CoreContainer  – Creating SolrCore 'blacklight-core' using configuration from instancedir /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/
+2650 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – solr.StandardDirectoryFactory
+2661 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] Opening new SolrCore at /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/, dataDir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/
+2661 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – JMX monitoring not detected for core: blacklight-core
+2672 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CachingDirectoryFactory  – return new directory for /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data
+2675 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – New index directory detected: old=null new=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/index/
+2676 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CachingDirectoryFactory  – return new directory for /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/index
+2776 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – no updateRequestProcessorChain defined as default, creating implicit default
+2782 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /update: org.apache.solr.handler.UpdateRequestHandler
+2782 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /update/json: org.apache.solr.handler.UpdateRequestHandler
+2782 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /update/csv: org.apache.solr.handler.UpdateRequestHandler
+2782 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /update/json/docs: org.apache.solr.handler.UpdateRequestHandler
+2788 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created search: solr.SearchHandler
+2789 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /get: solr.RealTimeGetHandler
+2789 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – adding lazy requestHandler: solr.ReplicationHandler
+2790 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /replication: solr.ReplicationHandler
+2790 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+2790 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /analysis/field: solr.FieldAnalysisRequestHandler
+2792 [coreLoadExecutor-5-thread-1] WARN  org.apache.solr.core.RequestHandlers  – Multiple requestHandler registered to the same name: /update ignoring: org.apache.solr.handler.UpdateRequestHandler
+2792 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /update: solr.UpdateRequestHandler
+2793 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /admin/: org.apache.solr.handler.admin.AdminHandlers
+2795 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /admin/ping: solr.PingRequestHandler
+2810 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2813 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2813 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2814 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2816 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2841 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – Hard AutoCommit: disabled
+2841 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – Soft AutoCommit: disabled
+2903 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/index,segFN=segments_c,generation=12}
+2903 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – newest commit generation = 12
+2977 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.search.SolrIndexSearcher  – Opening Searcher@78a38bac[blacklight-core] main
+2983 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.ManagedResourceStorage  – File-based storage initialized to use dir: /home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/conf
+2984 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.RestManager  – Initializing RestManager with initArgs: {storageDir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/conf}
+2994 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.ManagedResourceStorage  – Reading _rest_managed.json using file:dir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/conf
+3000 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.ManagedResourceStorage  – Loaded LinkedHashMap at path _rest_managed.json using file:dir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/conf
+3000 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.ManagedResource  – Loaded initArgs {} for /rest/managed
+3000 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.RestManager  – Initializing 0 registered ManagedResources
+3012 [searcherExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] Registered new searcher Searcher@78a38bac[blacklight-core] main{StandardDirectoryReader(segments_c:47:nrt _8(4.10.3):C2/1:delGen=1 _9(4.10.3):C2/1:delGen=1 _b(4.10.3):C2/1:delGen=1 _c(4.10.3):C1 _d(4.10.3):C1)}
+3014 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CoreContainer  – registering core: blacklight-core
+3016 [recoveryExecutor-7-thread-1] WARN  org.apache.solr.update.UpdateLog  – Starting log replay tlog{file=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/tlog/tlog.0000000000000000012 refcount=2} active=false starting pos=0
+3019 [main] INFO  org.apache.solr.servlet.SolrDispatchFilter  – user.dir=/home/rails/RubymineProjects/spotlight/jetty
+3020 [main] INFO  org.apache.solr.servlet.SolrDispatchFilter  – SolrDispatchFilter.init() done
+3060 [main] INFO  org.eclipse.jetty.server.AbstractConnector  – Started SocketConnector@0.0.0.0:8983
+3220 [recoveryExecutor-7-thread-1] INFO  org.apache.solr.update.UpdateHandler  – start commit{flags=2,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+3296 [recoveryExecutor-7-thread-1] INFO  org.apache.solr.core.SolrCore  – SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/index,segFN=segments_c,generation=12}
+	commit{dir=/home/rails/RubymineProjects/spotlight/jetty/solr/blacklight-core/data/index,segFN=segments_d,generation=13}
+3297 [recoveryExecutor-7-thread-1] INFO  org.apache.solr.core.SolrCore  – newest commit generation = 13
+3309 [recoveryExecutor-7-thread-1] INFO  org.apache.solr.search.SolrIndexSearcher  – Opening Searcher@5fc2a9d[blacklight-core] main
+3310 [recoveryExecutor-7-thread-1] INFO  org.apache.solr.update.UpdateHandler  – end_commit_flush
+3311 [searcherExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] Registered new searcher Searcher@5fc2a9d[blacklight-core] main{StandardDirectoryReader(segments_c:51:nrt _b(4.10.3):C2/1:delGen=1 _c(4.10.3):C1 _d(4.10.3):C1 _j(4.10.3):C6/2:delGen=1)}
+3315 [recoveryExecutor-7-thread-1] INFO  org.apache.solr.update.processor.LogUpdateProcessor  – [blacklight-core] {add=[3-6 (1499793171118292992), 3-7 (1499793171223150592), 1-2 (1499796331261067264), 1-2 (1499796342874046464), 1-1 (1499796343457054720), 1-1 (1499796448696336384)]} 0 299
+3315 [recoveryExecutor-7-thread-1] WARN  org.apache.solr.update.UpdateLog  – Log replay finished. recoveryInfo=RecoveryInfo{adds=6 deletes=0 deleteByQuery=0 errors=0 positionOfStart=0}
+9696 [qtp1940811570-11] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={sort=score+desc&fl=*&qt=search&wt=ruby&fq=spotlight_exhibit_slug_default-exhibit_bsi:true&rows=10} hits=2 status=0 QTime=52 
+9931 [qtp1940811570-14] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={spellcheck=false&sort=score+desc&fl=*&q={!lucene}id:(1-2)&qt=search&wt=ruby&fq=spotlight_exhibit_slug_default-exhibit_bsi:true&rows=10} hits=1 status=0 QTime=2 
+9962 [qtp1940811570-15] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={spellcheck=false&sort=score+desc&fl=*&q={!lucene}id:(1-1)&qt=search&wt=ruby&fq=spotlight_exhibit_slug_default-exhibit_bsi:true&rows=10} hits=1 status=0 QTime=1 
+9981 [qtp1940811570-13] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={spellcheck=false&sort=score+desc&fl=*&q={!lucene}id:(1-1+OR+1-2)&qt=search&wt=ruby&fq=spotlight_exhibit_slug_default-exhibit_bsi:true&rows=10} hits=2 status=0 QTime=6 
+460645 [qtp1940811570-16] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={sort=score+desc&fl=*&qt=search&wt=ruby&fq=spotlight_exhibit_slug_random-letters_bsi:true&rows=10} hits=3 status=0 QTime=2 
+466391 [qtp1940811570-17] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={sort=score+desc&fl=*&qt=search&wt=ruby&fq=spotlight_exhibit_slug_import-test_bsi:true&rows=10} hits=2 status=0 QTime=1 
+466451 [qtp1940811570-19] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={spellcheck=false&sort=score+desc&fl=*&q={!lucene}id:(1-2)&qt=search&wt=ruby&fq=spotlight_exhibit_slug_import-test_bsi:true&rows=10} hits=0 status=0 QTime=3 
+466459 [qtp1940811570-18] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={spellcheck=false&sort=score+desc&fl=*&q={!lucene}id:(1-1)&qt=search&wt=ruby&fq=spotlight_exhibit_slug_import-test_bsi:true&rows=10} hits=0 status=0 QTime=2 

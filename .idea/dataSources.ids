@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails spotlight: development" uuid="86598f2e-69a1-4b10-9cc0-c5b0b4dab539">
+    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="bookmarks" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="user_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="document_id" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="document_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_bookmarks_on_document_type_and_document_id" unique="true" columns="document_type,document_id"/>
+      <index name="index_bookmarks_on_user_id" unique="true" columns="user_id"/>
+    </table>
+    <table name="friendly_id_slugs" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="slug" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="sluggable_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="sluggable_type" sqlType="VARCHAR(50)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_friendly_id_slugs_on_sluggable_type" unique="true" columns="sluggable_type"/>
+      <index name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" unique="true" columns="slug,sluggable_type,scope"/>
+      <index name="index_friendly_id_slugs_on_slug_and_sluggable_type" unique="true" columns="slug,sluggable_type"/>
+      <index name="index_friendly_id_slugs_on_sluggable_id" unique="true" columns="sluggable_id"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="searches" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="query_params" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="user_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_searches_on_user_id" unique="true" columns="user_id"/>
+    </table>
+    <table name="spotlight_attachments" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="file" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="uid" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="spotlight_blacklight_configurations" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="facet_fields" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="index_fields" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="search_fields" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sort_fields" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="default_solr_params" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="show" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="index" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="default_per_page" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="per_page" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="document_index_view_types" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="thumbnail_size" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="spotlight_contact_emails" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="email" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="confirmation_token" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="confirmed_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="confirmation_sent_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="unconfirmed_email" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_contact_emails_on_confirmation_token" unique="true" columns="confirmation_token"/>
+      <index name="index_spotlight_contact_emails_on_email_and_exhibit_id" unique="true" columns="email,exhibit_id"/>
+    </table>
+    <table name="spotlight_contacts" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="slug" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="location" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="telephone" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="show_in_sidebar" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="weight" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="contact_info" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="avatar" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="avatar_crop_x" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="avatar_crop_y" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="avatar_crop_w" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="avatar_crop_h" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_contacts_on_exhibit_id" unique="true" columns="exhibit_id"/>
+    </table>
+    <table name="spotlight_custom_fields" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="slug" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="field" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="configuration" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="field_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="spotlight_exhibits" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="default" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="subtitle" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="slug" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="searchable" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="layout" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="published" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="published_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="featured_image" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="masthead_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="thumbnail_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_exhibits_on_slug" unique="true" columns="slug"/>
+      <index name="index_spotlight_exhibits_on_default" unique="true" columns="default"/>
+    </table>
+    <table name="spotlight_featured_images" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="display" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="image" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="source" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="document_global_id" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="image_crop_x" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="image_crop_y" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="image_crop_w" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="image_crop_h" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="spotlight_locks" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="on_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="on_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="by_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="by_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_locks_on_on_id_and_on_type" unique="true" columns="on_id,on_type"/>
+    </table>
+    <table name="spotlight_main_navigations" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="label" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="weight" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="nav_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="display" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_main_navigations_on_exhibit_id" unique="true" columns="exhibit_id"/>
+    </table>
+    <table name="spotlight_pages" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="slug" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="weight" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="published" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_by_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="last_edited_by_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="parent_page_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="display_sidebar" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="display_title" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="thumbnail_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_pages_on_slug_and_scope" unique="true" columns="slug,scope"/>
+      <index name="index_spotlight_pages_on_parent_page_id" unique="true" columns="parent_page_id"/>
+      <index name="index_spotlight_pages_on_exhibit_id" unique="true" columns="exhibit_id"/>
+    </table>
+    <table name="spotlight_resources" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="data" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="indexed_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="spotlight_roles" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="role" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_roles_on_exhibit_id_and_user_id" unique="true" columns="exhibit_id,user_id"/>
+    </table>
+    <table name="spotlight_searches" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="slug" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="short_description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="long_description" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="query_params" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="weight" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="on_landing_page" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="featured_item_id" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="masthead_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="thumbnail_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_searches_on_slug_and_scope" unique="true" columns="slug,scope"/>
+      <index name="index_spotlight_searches_on_exhibit_id" unique="true" columns="exhibit_id"/>
+    </table>
+    <table name="spotlight_solr_document_sidecars" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="exhibit_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="public" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="data" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="document_id" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="document_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_spotlight_solr_document_sidecars_on_exhibit_id" unique="true" columns="exhibit_id"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="taggings" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="tag_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="taggable_id" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="taggable_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="tagger_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="tagger_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="context" sqlType="VARCHAR(128)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_taggings_on_taggable_id_and_taggable_type_and_context" unique="true" columns="taggable_id,taggable_type,context"/>
+      <index name="taggings_idx" unique="true" columns="tag_id,taggable_id,taggable_type,context,tagger_id,tagger_type"/>
+    </table>
+    <table name="tags" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="taggings_count" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_tags_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="users" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="email" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="encrypted_password" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="reset_password_token" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="reset_password_sent_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="remember_created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sign_in_count" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="current_sign_in_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="last_sign_in_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="current_sign_in_ip" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="last_sign_in_ip" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="guest" sqlType="BOOLEAN" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
+      <index name="index_users_on_email" unique="true" columns="email"/>
+    </table>
+    <table name="versions" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="item_type" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="item_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="event" sqlType="VARCHAR" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="whodunnit" sqlType="VARCHAR" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="object" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_versions_on_item_type_and_item_id" unique="true" columns="item_type,item_id"/>
+    </table>
+  </data-source>
+</component>
