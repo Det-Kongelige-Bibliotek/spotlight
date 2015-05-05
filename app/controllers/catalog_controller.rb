@@ -65,7 +65,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'author_sim', :label => 'Forfatter'
     #config.add_facet_field 'active_fedora_model_ssi', :label => 'Indhold', helper_method: :translate_model_names
     config.add_facet_field 'work_collection_sim', :label => 'Samling'
-    config.add_facet_field 'work_activity_sim', :label => 'Aktivitet', helper_method: :get_activity_name
+    config.add_facet_field 'work_activity_sim', :label => 'Aktivitet'#, helper_method: :get_activity_name
 
 
     # Have BL send all facet field names to Solr, which has been the default
