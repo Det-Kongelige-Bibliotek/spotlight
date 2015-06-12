@@ -1,0 +1,27 @@
+<div id="header-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#user-util-collapse">
+        <span class="sr-only"><%= t :toggle_nav %></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to application_name, main_app.root_path, class: "navbar-brand" %>
+    </div>
+
+    <div class="collapse navbar-collapse" id="user-util-collapse">
+      <%= render :partial=>'/user_util_links' %>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/exhibit_navbar' unless exhibit_masthead? %>
+<% if current_exhibit %>
+    <%= render 'spotlight/shared/report_a_problem' if show_contact_form? %>
+    <%= render 'shared/exhibit_masthead' %>
+<% end %>
+<% if exhibit_masthead? %>
+    <%= render 'shared/exhibit_navbar' %>
+    <%= render 'shared/breadcrumbs' %>
+<% end %>
