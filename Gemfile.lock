@@ -32,7 +32,7 @@ GIT
       lodash-rails
       mail_form (~> 1.5, >= 1.5.1)
       mini_magick
-      nokogiri
+      nokogiri (~> 1.8.1)
       oauth2
       paper_trail (~> 4.0.0.beta)
       rails (~> 4.0, >= 4.2.0)
